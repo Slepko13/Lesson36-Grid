@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Hans Kendrick';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Miso"), url("../fonts/HansKendrick-Regular.otf") format("woff"); }
+
+body {
+  display: grid;
+  justify-content: center; }
+
+.container {
+  display: grid;
+  width: 1600px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 20px;
+  background-color: #e2e7ec;
+  padding: 90px 240px 200px 240px; }
+  @media screen and (max-width: 1800px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr auto; }
+      .container .item2,
+      .container .item4 {
+        grid-column: 1/2; }
+      .container .item3,
+      .container .item5 {
+        grid-column: 2/3; }
+      .container footer {
+        grid-column: 1/3; } }
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 1100px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto; }
+      .container .item2 {
+        grid-column: 1/2;
+        grid-row: 2/3; }
+      .container .item3 {
+        grid-column: 1/2;
+        grid-row: 3/4; }
+      .container .item4 {
+        grid-column: 1/2;
+        grid-row: 4/5; }
+      .container .item5 {
+        grid-column: 1/2;
+        grid-row: 5/6; }
+      .container .big {
+        grid-column: 1/2;
+        grid-row: 1/2; }
+      .container footer {
+        grid-column: 1/2;
+        grid-row: 6/7; } }
+  .container .big {
+    grid-column: 1/3; }
+  .container .item1 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("../Images/bigfoto.png") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid red;
+    padding: 40px; }
+    .container .item1 .date {
+      opacity: 0.5;
+      color: #ffffff;
+      color: #818181;
+      font-family: "Hans Kendrick";
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: 0.33px;
+      margin-bottom: 10px; }
+    .container .item1 .description {
+      color: #ffffff;
+      font-size: 40px;
+      width: 70%;
+      font-family: "Hans Kendrick", sans-serif;
+      font-weight: 400;
+      margin: 5px;
+      text-transform: uppercase; }
+  .container .small {
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: 1fr 1fr; }
+    .container .small .bot {
+      display: grid;
+      grid-template-rows: 1fr 2fr 3fr;
+      padding: 30px;
+      border: 1px solid green; }
+      .container .small .bot .date {
+        color: #818181;
+        font-family: "Hans Kendrick";
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 30px;
+        text-transform: uppercase;
+        /* Text style for "November 2" */
+        letter-spacing: 0.33px; }
+      .container .small .bot .description {
+        color: #1d1d1d;
+        font-family: "Hans Kendrick - Heavy";
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.55px; }
+      .container .small .bot .icon {
+        align-self: end; }
+
+.item2,
+.item3,
+.item4,
+.item5 {
+  background-color: #ffffff; }
+
+.img2 img,
+.img3 img,
+.img4 img,
+.img5 img {
+  width: 100%;
+  height: 100%; }
+
+footer {
+  color: #99a5b0;
+  font-family: "Hans Kendrick - Heavy";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  /* Text style for "LOADING NE" */
+  letter-spacing: 0.33px;
+  border: 1px solid red;
+  text-align: center;
+  grid-column: 1/4;
+  padding-top: 90px;
+  padding-bottom: 100px; }
+
+footer img {
+  width: 15px;
+  height: 13px;
+  vertical-align: middle;
+  margin-right: 5px; }
